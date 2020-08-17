@@ -1,10 +1,11 @@
 # Semana 1
-1. [Tuplas-Listas](#Tuplas-Listas)
-2. [Stacks](#Stacks)
-3. [Colas](#Colas)
-4. [Diccionarios](#Diccionarios)
-5. [Sets](#Sets)
-6. [Args-Kwargs](#Args-Kwargs)
+1. [Tuplas](#Tuplas)
+2. [Listas](#Listas)
+3. [Stacks](#Stacks)
+4. [Colas](#Colas)
+5. [Diccionarios](#Diccionarios)
+6. [Sets](#Sets)
+7. [Args-Kwargs](#Args-Kwargs)
 ## Tuplas
 Se utilizan para manejar datos de manera **ordenada e inmutable**, no se pueden cambiar los datos de las tuplas. Sin embargo, se pueden modificar datos contenidos dentro de un elemento de esta, siempre qu el tipo de dato lo permita. Estas pueden ser **heterogéneas**, contienen tipos de datos distintos, u **homogéneas**, mismo tipo de dato.
 ```python
@@ -19,10 +20,12 @@ print(b)
 print(c)
 print(d)
 ```
+```
 ()
 (0, 1, 2)
 (0,)
 (0, 'uno')
+```
 ### Desempaquetamiento de elementos
 Las tuplas pueden ser desempaquetadas en **variables individuales**. 
 ```python
@@ -55,4 +58,58 @@ print(f"4: {a}, {p}, {mpa}, {mpb}")
 4: 200.0, 60.0, 10.0, 5.0
 ```
 ### Slicing de tuplas
-Es posible tomar secciones de la tupla usando la notación _**slicing**_
+Es posible tomar secciones de la tupla usando la notación _**slicing**_. Los índices no coinciden directamente con la posición del elemento, sino que funcionan como márgenes. 
+```python
+data = (400, 20, 1, 4, 10, 11, 12, 500)
+
+# Recuperamos los elementos que están entre los índices 1 y 3
+a = data[1:3]
+print('1: {0}'.format(a))
+
+# Recuperamos desde el índice 3 en adelante
+a = data[3:]
+print('2: {0}'.format(a))
+
+# Recuperamos los valores hasta el índice 5
+a = data[:5]
+print('3: {0}'.format(a))
+
+# Recuperamos desde el índice 2 en adelante respecto del slice en pasos de a dos
+a = data[2::2]
+print('4: {0}'.format(a))
+
+# Recuperamos entre los índices 1 y 6, en pasos de a dos
+a = data[1:6:2]
+print('5: {0}'.format(a))
+
+a = data[::-1]
+print('6: {0}'.format(a))
+```
+```
+1: (20, 1)
+2: (4, 10, 11, 12, 500)
+3: (400, 20, 1, 4, 10)
+4: (1, 10, 12)
+5: (20, 4, 11)
+6: (500, 12, 11, 10, 4, 1, 20, 400)
+```
+## Listas
+- `.extend()`: Agrega una lista al final de otra, se fusionan
+- `.insert(n, variable)`: Inserta la variable en la posición n de la lista
+- `.sort()`: Ordena de menor a mayor
+- `.sort(reverse=True)`: Ordena de mayor a menor
+- Se puede hacer _**slicing**_ igual que elas tuplas
+### Listas por comprensión
+Se pueden agregar elementos a las listas de una manera más eficientes, utilizando el iterador dentro de la lista. 
+```python
+nueva_lista = [expresion for elemento in lista/iterador]
+```
+```python
+largo_de_bandas = []
+
+for nombre in bandas:
+    largo_de_bandas.append(len(nombre))
+
+Se puede escribir:
+largo_de_bandas = [len(nombre) for nombre in bandas]
+```

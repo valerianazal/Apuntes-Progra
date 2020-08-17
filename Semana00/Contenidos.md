@@ -116,8 +116,9 @@ Directorios:
 - Cerrar archivo: `archivo.close()`
 - `with open(ruta_del_archivo, 'rt') as alias`: El archivo se cierra automáticamente
 - `.strip()`: elimina saltos de línea
+
 Para guardar en otro archivo:
-```pyhton
+```python
 ruta_juego_2 = os.path.join("data", "gato", "juego_2.txt")
 
 with open(ruta_juego_2, "wt") as archivo:

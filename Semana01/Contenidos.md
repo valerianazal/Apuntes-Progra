@@ -118,4 +118,8 @@ Un _stack_ es una estructura de datos que como funciona como si fuera una pila d
 Algunos comandos importantes:
 | Operación | Código | Descripción |
 | --------- | ------ | ----------- |
-| Creat stack|
+| Crear stack | `stack = []` | Crea un stack vacío |
+| _Push_ | `stack.append(elemento)` | Agrega un elemento al tope del stack |
+| _Pop_ | `stack.pop()` | Retorna y extrae el elemento del tope del stack |
+| _Peek_ | `stack[-1]` | Retorna el elemento del tope del stack sin extraerlo |
+| _Lenght_ | `len(stack)` | Cantidad de elementos |

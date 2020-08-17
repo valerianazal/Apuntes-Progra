@@ -70,7 +70,7 @@ En Mac: 'Users/Pedro/Libros/python.pdf'
 En Windows: 'Users\Pedro\Libros\python.pdf'
 ```
 
-### Navegación entre directorios
+### hola
 - `listdir`: Al entregarle una ruta muestra una lista con todos los nombres de directorios y archivos dentro de esta
 ```python
 lista_de_contenidos = os.listdir('data')

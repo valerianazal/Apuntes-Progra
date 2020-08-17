@@ -122,4 +122,22 @@ Algunos comandos importantes:
 | _Push_ | `stack.append(elemento)` | Agrega un elemento al tope del stack |
 | _Pop_ | `stack.pop()` | Retorna y extrae el elemento del tope del stack |
 | _Peek_ | `stack[-1]` | Retorna el elemento del tope del stack sin extraerlo |
-| _Lenght_ | `len(stack)` | Cantidad de elementos |
+| _Length_ | `len(stack)` | Cantidad de elementos |
+| *is_empty* | `len(stack) == 0` | Retorna *true* si el stack está vacío |
+## Colas
+Una **cola** es una estructura de datos secuencial que mantiene objetos ordenados de acuerdo a su orden de llegada. 
+Algunos comandos importantes:
+| Operación | Código | Descripción |
+| --------- | ------ | ----------- |
+| Crear cola | `cola = deque()` | Crea una cola vacía |
+| Crear cola | `cola = deque(cola)` | Crea una cola a partir de los elementos de una lista |
+| _Enqueue_ | `cola.append(elemento)` | Agrega un elemento al final de la cola |
+| _Dequeue_ | `cola.popleft()` | Retorna y extrae el primer elemento |
+| _Peek_ | `cola[0]` | Retorna el primer elemento sin extraerlo |
+| _length_ | `len(cola)` | Retorna la cantidad de elementos |
+| *is_empty* | `len(cola) == 0` | Retorna *true* si la cola está vacía |
+IMPORTANTE: 
+```python
+from collections import deque
+```
+### Colas de doble extremo

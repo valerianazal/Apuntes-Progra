@@ -113,7 +113,7 @@ Directorios:
     - `'t'`: forma de texto
     - `'rt'`: ambas
 - `readlines`: Lista de las líneas del archivo del texto
-- Cerrar archivo: `archivo.close()``
+- Cerrar archivo: `archivo.close()`
 - `with open(ruta_del_archivo, 'rt') as alias`: El archivo se cierra automáticamente
 - `.strip()`: elimina saltos de línea
 Para guardar en otro archivo:

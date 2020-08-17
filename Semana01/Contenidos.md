@@ -154,7 +154,7 @@ IMPORTANTE:
 | _Remove_ | `deque.remove(elemento)` | Saca el primer elemento que encuentre |
 | _Count_ | `deque.count(elemento)` | Cuenta el número de elementos iguales |
 
-## Diccionarios
+## Diccionarios
 Son estructuras de datos **no secuenciales**, es decir, no establecen necesariamente un orden fijo de acceso. Sin embargo, se compensa al proveer métodos muy eficientes de **búsqueda** de datos. 
 - Permiten asociar pares de elementos mediante la relación **llave-valor**
 - Son **mutables**

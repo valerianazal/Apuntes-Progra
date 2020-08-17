@@ -57,3 +57,52 @@ print(extension)
 imagen
 .jpg
 -- -- --
+### Problema de portabilidad
+Hay diferencias en los caracteres de separación entre sistemas operativos, entonces se genera un problema de portabilidad de programas. Por lo tanto, se puede utilizar el módulo `os.path.join`, ya que reescribe rutas usando los caracteres de separación nativos del sistema operativo
+```python
+ruta = os.path.join('Users', 'Pedro', 'Libros', 'python.pdf')
+ruta
+```
+En Mac: 'Users/Pedro/Libros/python.pdf'
+En Windows: 'Users\Pedro\Libros\python.pdf'
+### Navegación entre directorios
+- `listdir`: Al entregarle una ruta muestra una lista con todos los nombres de directorios y archivos dentro de esta
+```python
+lista_de_contenidos = os.listdir('data')
+lista_de_contenidos
+```
+['archivo.txt', 'archivo_de_texto.jpg, 'files.png']
+- `walk`: Permite obtener rutas de un directorio, de sus subdirectorios y de sus archivos. Se navega recursivamente dentro de la carpeta para ver lo que contiene.
+```python
+for raiz, directorios, archivos in os.walk("data", topdown = True):
+    print("Raíz:",raiz)
+    print()
+    print("Archivos:")
+    for archivo in archivos:
+        print(os.path.join(raiz, archivo))
+    print()
+    print("Directorios:")
+    for directorio in directorios:
+        print(os.path.join(raiz, directorio))
+    print("-"*30)
+```
+
+Raíz: data
+
+Archivos:
+data/archivo.txt
+data/archivo_de_texto.jpg
+data/files.png
+
+Directorios:
+data/gato
+'------------------------------'
+Raíz: data/gato
+
+Archivos:
+data/gato/juego_1.txt
+data/gato/juego_2.txt
+
+Directorios:
+'------------------------------'
+

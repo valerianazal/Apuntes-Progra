@@ -69,6 +69,7 @@ ruta
 En Mac: 'Users/Pedro/Libros/python.pdf'
 En Windows: 'Users\Pedro\Libros\python.pdf'
 ```
+
 ### Navegación entre directorios
 - `listdir`: Al entregarle una ruta muestra una lista con todos los nombres de directorios y archivos dentro de esta
 ```python

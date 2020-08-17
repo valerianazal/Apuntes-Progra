@@ -55,4 +55,4 @@ print(f"4: {a}, {p}, {mpa}, {mpb}")
 4: 200.0, 60.0, 10.0, 5.0
 ```
 ### Slicing de tuplas
-Es posible tomar secciones de la tupla usando la notación _*slicing*_
+Es posible tomar secciones de la tupla usando la notación _**slicing**_

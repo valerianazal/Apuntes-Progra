@@ -40,9 +40,11 @@ print(f'path: {path1}')
 print(f'dirname: {dirname1}')
 print(f'filename/basename: {basename1}')
 ```
+```
 path: carpeta1/carpeta2/imagen.jpg
 dirname: /carpeta1/carpeta2
 filename/basename: imagen.jpg
+```
 -- -- --
 ### Extensión de archivo
 Sirven para dos objetivos:
@@ -63,8 +65,10 @@ Hay diferencias en los caracteres de separación entre sistemas operativos, ento
 ruta = os.path.join('Users', 'Pedro', 'Libros', 'python.pdf')
 ruta
 ```
+```
 En Mac: 'Users/Pedro/Libros/python.pdf'
 En Windows: 'Users\Pedro\Libros\python.pdf'
+```
 ### Navegación entre directorios
 - `listdir`: Al entregarle una ruta muestra una lista con todos los nombres de directorios y archivos dentro de esta
 ```python

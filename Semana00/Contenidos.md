@@ -86,7 +86,7 @@ for raiz, directorios, archivos in os.walk("data", topdown = True):
         print(os.path.join(raiz, directorio))
     print("-"*30)
 ```
-```python
+```
 Raíz: data
 
 Archivos:

@@ -43,7 +43,7 @@ print(f'filename/basename: {basename1}')
 path: carpeta1/carpeta2/imagen.jpg
 dirname: /carpeta1/carpeta2
 filename/basename: imagen.jpg
-------
+-- -- --
 ### Extensión de archivo
 Sirven para dos objetivos:
 1. Darle una pista al usuario sobre el tipo de archivo de que se trata
@@ -56,4 +56,4 @@ print(extension)
 ```
 imagen
 .jpg
-------
+-- -- --

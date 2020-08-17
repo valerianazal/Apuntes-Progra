@@ -139,8 +139,7 @@ Algunos comandos importantes:
 
 IMPORTANTE: 
 
--- 
-### Colas de doble extremo
+### Colas de doble extremo
 | Operación | Código | Descripción |
 | --------- | ------ | ----------- |
 | Crear _deque_ | deque() | Vacío |

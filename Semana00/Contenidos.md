@@ -127,3 +127,14 @@ with open(ruta_juego_2, "wt") as archivo:
         print(fila_en_texto)
         archivo.write(fila_en_texto)
 ```
+## Strings
+- `\"`: Comdilla doble
+- `\'`: Comilla simple
+- `\n'`: Salto de línea 
+- `.isalpha()`: Están el alfabeto de algún lenguaje
+- `.isdigit()`: Son dígitos numéricos
+- `variable.find('secuencua')`: Índice en la variable donde comienza la secuencia
+- `variable.index('secuencia', inicio, fin)`: Índice donde comienza la secuencia.
+- `.split(',')`: Retorna una lista
+- `'algo'.join(variable)`: Pone algo en todos los espacios
+- `variable.replace(esto, por esto)`: Reemplaza en el string

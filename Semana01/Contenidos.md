@@ -129,7 +129,7 @@ Una **cola** es una estructura de datos secuencial que mantiene objetos ordenado
 Algunos comandos importantes:
 | Operación | Código | Descripción |
 | --------- | ------ | ----------- |
-| Crear cola | `cola = deque()` | Crea una cola vacía |
+|Crear cola | `cola = deque()` | Crea una cola vacía |
 | Crear cola | `cola = deque(cola)` | Crea una cola a partir de los elementos de una lista |
 | _Enqueue_ | `cola.append(elemento)` | Agrega un elemento al final de la cola |
 | _Dequeue_ | `cola.popleft()` | Retorna y extrae el primer elemento |
@@ -141,4 +141,8 @@ IMPORTANTE:
 ```python
 from collections import deque
 ```
+
 ### Colas de doble extremo
+| Operación | Código | Descripción |
+| --------- | ------ | ----------- |
+| 

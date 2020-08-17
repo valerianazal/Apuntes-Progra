@@ -141,9 +141,6 @@ IMPORTANTE:
 ```python
 from collections import deque
 ```
-
-
-
 ### Colas de doble extremo
 | Operación | Código | Descripción |
 | --------- | ------ | ----------- |

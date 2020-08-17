@@ -145,4 +145,20 @@ from collections import deque
 ### Colas de doble extremo
 | Operación | Código | Descripción |
 | --------- | ------ | ----------- |
-| 
+| Crear _deque_ | deque() | Vacío |
+| Crear _deque_ | deque(lista) | A partir de elementos |
+| _Add first_ | `deque.appendleft(elemento)` | Agrega al inicio |
+| _Add last_ | `deque.append(elemento)` | Agrega al final |
+| _Delete first_ | `deque.popleft()` | Retorna y extrae el primer elemento |
+| _Delete last_ | `deque.pop()` | Retorna y extrae el último elemento |
+| _First_ | `deque[0]` | Retorna el primer elemento |
+| _Last_ | `deque[-1]` | Retorna el último elemento |
+| _Clear_ | `deque.clear()` | Limpia el deque |
+| _Remove_ | `deque.remove(elemento)` | Saca el primer elemento que encuentre |
+| _Count_ | `deque.count(elemento)` | Cuenta el número de elementos iguales |
+
+## Diccionarios
+Son estructuras de datos **no secuenciales**, es decir, no establecen necesariamente un orden fijo de acceso. Sin embargo, se compensa al proveer métodos muy eficientes de **búsqueda** de datos. 
+- Permiten asociar pares de elementos mediante la relación **llave-valor**
+- Son **mutables**
+- No es necesario que las llaves sean todas del mismo tipo

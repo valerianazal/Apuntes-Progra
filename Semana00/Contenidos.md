@@ -86,23 +86,24 @@ for raiz, directorios, archivos in os.walk("data", topdown = True):
         print(os.path.join(raiz, directorio))
     print("-"*30)
 ```
+```python
+'Raíz: data'
 
-Raíz: data
+'Archivos:'
+'data/archivo.txt'
+'data/archivo_de_texto.jpg'
+'data/files.png'
 
-Archivos:
-data/archivo.txt
-data/archivo_de_texto.jpg
-data/files.png
-
-Directorios:
-data/gato
+'Directorios:'
+'data/gato'
 '------------------------------'
-Raíz: data/gato
+'Raíz: data/gato'
 
-Archivos:
-data/gato/juego_1.txt
-data/gato/juego_2.txt
+'Archivos:'
+'data/gato/juego_1.txt'
+'data/gato/juego_2.txt'
 
-Directorios:
+'Directorios:'
 '------------------------------'
+```
 

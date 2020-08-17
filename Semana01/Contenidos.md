@@ -145,8 +145,8 @@ from collections import deque
 ### Colas de doble extremo
 | Operación | Código | Descripción |
 | --------- | ------ | ----------- |
-| Crear _deque_ | deque() | Vacío |
-| Crear _deque_ | deque(lista) | A partir de elementos |
+| Crear _deque_ | `deque()` | Vacío |
+| Crear _deque_ | `deque(lista)` | A partir de elementos |
 | _Add first_ | `deque.appendleft(elemento)` | Agrega al inicio |
 | _Add last_ | `deque.append(elemento)` | Agrega al final |
 | _Delete first_ | `deque.popleft()` | Retorna y extrae el primer elemento |
@@ -162,3 +162,5 @@ Son estructuras de datos **no secuenciales**, es decir, no establecen necesariam
 - Permiten asociar pares de elementos mediante la relación **llave-valor**
 - Son **mutables**
 - No es necesario que las llaves sean todas del mismo tipo
+
+hola diego

@@ -118,4 +118,4 @@ Un _stack_ es una estructura de datos que como funciona como si fuera una pila d
 Algunos comandos importantes:
 | Operación | Código | Descripción |
 | --------- | ------ | ----------- |
- 
+| Creat stack|

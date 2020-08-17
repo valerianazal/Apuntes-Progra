@@ -11,5 +11,12 @@ import nombre_archivo as lol
 
 lol.__name__
 ```
-nombre_archivo
-- `from` nombre_archivo `import` a, b, c --> Solo se importa a, b y
+  nombre_archivo
+- `from` nombre_archivo `import` a, b, c --> Solo se importa a, b y c
+## Paths
+"El módulo `os`de python nos provee una interfaz portables para ejecutar operaciones relacionadas al sistema operativo y al sistema de archivos."
+```python
+import os
+```
+Un path nos indica el lugar donde se encuentra el archivo, desde la primera carpeta hasta llegar a él. Existen 2 tipos de paths:
+- Path **absoluto**

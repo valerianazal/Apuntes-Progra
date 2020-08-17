@@ -136,6 +136,7 @@ Algunos comandos importantes:
 | _Peek_ | `cola[0]` | Retorna el primer elemento sin extraerlo |
 | _length_ | `len(cola)` | Retorna la cantidad de elementos |
 | *is_empty* | `len(cola) == 0` | Retorna *true* si la cola está vacía |
+
 IMPORTANTE: 
 ```python
 from collections import deque

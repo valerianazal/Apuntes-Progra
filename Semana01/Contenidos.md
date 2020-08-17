@@ -113,3 +113,9 @@ for nombre in bandas:
 Se puede escribir:
 largo_de_bandas = [len(nombre) for nombre in bandas]
 ```
+## Stacks
+Un _stack_ es una estructura de datos que como funciona como si fuera una pila de objetos, uno arriba del otro. 
+Algunos comandos importantes:
+| Operación | Código | Descripción |
+| --------- | ------ | ----------- |
+ 

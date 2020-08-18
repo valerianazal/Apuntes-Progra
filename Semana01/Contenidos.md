@@ -99,7 +99,8 @@ print('6: {0}'.format(a))
 - `.sort()`: Ordena de menor a mayor
 - `.sort(reverse=True)`: Ordena de mayor a menor
 - Se puede hacer _**slicing**_ igual que elas tuplas
-### Listas por comprensión
+
+### Listas por comprensión
 Se pueden agregar elementos a las listas de una manera más eficientes, utilizando el iterador dentro de la lista. 
 ```python
 nueva_lista = [expresion for elemento in lista/iterador]
@@ -263,3 +264,5 @@ defaultdict(<function funcion_default at 0x7ffe337cad40>, {'A': 0.03034315468711
 - Las llaves deben ser **únicas** y _**hasheables**_, esto significa que son **inmutables**
 - Llaves permitidas: `int`, `str`, `tuple`
 - La tupla es hasheable si todos sus elementos lo son
+## Sets
+

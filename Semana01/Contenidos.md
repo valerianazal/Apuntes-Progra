@@ -262,3 +262,4 @@ defaultdict(<function funcion_default at 0x7ffe337cad40>, {'A': 0.03034315468711
 - Las **listas** NO se pueden utilizar como llaves
 - Las llaves deben ser **únicas** y _**hasheables**_, esto significa que son **inmutables**
 - Llaves permitidas: `int`, `str`, `tuple`
+- La tupla es hasheable si todos sus elementos lo son

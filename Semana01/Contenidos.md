@@ -162,5 +162,28 @@ Son estructuras de datos **no secuenciales**, es decir, no establecen necesariam
 - Permiten asociar pares de elementos mediante la relación **llave-valor**
 - Son **mutables**
 - No es necesario que las llaves sean todas del mismo tipo
-
-hola diego
+- Se le consulta por una **llave** y retorna su **valor** asociado
+- Implementados por la clase `dict``
+- La notación para escribir un diccionario es con llaves {}
+```python
+monedas = {'Chile': 'Peso', 'Perú': 'Soles', 'España': 'Euro', 'Holanda': 'Euro', 'Brasil': 'Real'}
+```
+Para acceder al valor asociado a una llave se usan los corchetes []
+```python
+moneda['Chile']
+```
+'Peso'
+- Si se consulta por una llave que no existe obtenemos un error
+- Otra manera de acceder al valor asociado es utilizar el método `get`, el que requiere 2 parámetros: la llave buscada y un valor en caso de que la llave no exista
+```python
+print(monedas.get('Chile', 'No tiene moneda'))
+print(monedas.get('Argentina', 'No tiene moneda'))
+```
+```python
+Peso
+No tiene moneda
+```
+- Si se asigna un valor a una llave pueden pasar 2 cosas:
+    - Si la llave **existe**: Se actualiza con el nuevo valor
+    - Si la llave **no existe**: Se crea y se le asigna un valor
+    

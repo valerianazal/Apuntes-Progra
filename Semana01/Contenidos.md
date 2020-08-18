@@ -186,4 +186,36 @@ No tiene moneda
 - Si se asigna un valor a una llave pueden pasar 2 cosas:
     - Si la llave **existe**: Se actualiza con el nuevo valor
     - Si la llave **no existe**: Se crea y se le asigna un valor
-    
+- No es necesario que las llaves sean todas del mismo tipo
+- Se pueden **eliminar** ítems utilizando `del diccionario[nombre_llave]`
+- Se puede commprobar la **existencia** de una llave con `llave in diccionario`. Imprime un bool
+- Métodos útiles para acceder a valores asociados `dict`:
+    - `keys()`: lista con las llaves del diccionario
+    - `values()`: lista con los valores
+    - `items()`: lista con los **pares** --> tupla (llave, valor)
+```python
+print(monedas.keys())
+print(monedas.values())
+print(monedas.items())
+```
+```
+dict_keys(['Chile', 'Perú', 'España', 'Holanda', 'Brasil', 'Vaticano'])
+dict_values(['Peso', 'Soles', 'Euro', 'Euro', 'Real', 'Euro'])
+dict_items([('Chile', 'Peso'), ('Perú', 'Soles'), ('España', 'Euro'), ('Holanda', 'Euro'), ('Brasil', 'Real'), ('Vaticano', 'Euro')])
+```
+- **Diccionarios por comprensión:**
+```python
+from string import ascii_lowercase as letras
+
+numero_por_letra = {letras[i].upper(): i + 1 for i in range(len(letras))}
+print(numero_por_letra)
+
+numero_por_vocales = {letras[i].upper(): i + 1 for i in range(len(letras)) if letras[i].upper() in "AEIOU"}
+print(numero_por_vocales)
+```
+```
+{'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9, 'J': 10, 'K': 11, 'L': 12, 'M': 13, 'N': 14, 'O': 15, 'P': 16, 'Q': 17, 'R': 18, 'S': 19, 'T': 20, 'U': 21, 'V': 22, 'W': 23, 'X': 24, 'Y': 25, 'Z': 26}
+{'A': 1, 'E': 5, 'I': 9, 'O': 15, 'U': 21}
+```
+
+

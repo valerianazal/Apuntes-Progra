@@ -163,7 +163,7 @@ Son estructuras de datos **no secuenciales**, es decir, no establecen necesariam
 - Son **mutables**
 - No es necesario que las llaves sean todas del mismo tipo
 - Se le consulta por una **llave** y retorna su **valor** asociado
-- Implementados por la clase `dict``
+- Implementados por la clase `dict`
 - La notación para escribir un diccionario es con llaves {}
 ```python
 monedas = {'Chile': 'Peso', 'Perú': 'Soles', 'España': 'Euro', 'Holanda': 'Euro', 'Brasil': 'Real'}
@@ -217,5 +217,46 @@ print(numero_por_vocales)
 {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7, 'H': 8, 'I': 9, 'J': 10, 'K': 11, 'L': 12, 'M': 13, 'N': 14, 'O': 15, 'P': 16, 'Q': 17, 'R': 18, 'S': 19, 'T': 20, 'U': 21, 'V': 22, 'W': 23, 'X': 24, 'Y': 25, 'Z': 26}
 {'A': 1, 'E': 5, 'I': 9, 'O': 15, 'U': 21}
 ```
+-- -- -- 
+### defaultdicts
+Son diccionarios que nos permiten asignar un valor por defecto a cada _key_ con la que se llama al diccioanrio. Reciben una **función** que debe devolver el valor que se adignará por defecto. Esta **no debe recibir parámetros**, puede realizar cualquier acción y puede devolver cualquier objeto.
+```python
+from collections import defaultdict
 
+msg = 'supercalifragilisticoespialidoso'
+
+# Crea un defaultdict vacío.
+vocales = defaultdict(int)  
+
+for letra in msg:
+    if letra not in 'aeiou': # Revisa si la letra es una vocal
+        continue
+
+    vocales[letra] += 1 # si ya existe, agrega una cuenta mas
+
+print(vocales)
+```
+```
+defaultdict(<class 'int'>, {'u': 1, 'e': 2, 'a': 3, 'i': 6, 'o': 3})
+```
+```python
+from random import random
+
+def funcion_default():
+    return random()
+
+diccionario = defaultdict(funcion_default)
+
+print(diccionario)
+diccionario['A']
+print(diccionario)
+diccionario['B']
+print(diccionario)
+```
+```
+defaultdict(<function funcion_default at 0x7ffe337cad40>, {})
+defaultdict(<function funcion_default at 0x7ffe337cad40>, {'A': 0.030343154687117457})
+defaultdict(<function funcion_default at 0x7ffe337cad40>, {'A': 0.030343154687117457, 'B': 0.059489179944941406})
+```
+-- -- --
 

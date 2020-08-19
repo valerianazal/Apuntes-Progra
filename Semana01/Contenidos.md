@@ -287,5 +287,48 @@ Son contenedores **mutables** y **no ordenados** que no repiten elementos y pued
 - Las operaciones de unión e intersección no alteran los sets originales
 -- -- --
 - Se puede iterar con `for`, pero no hay un orden para recorrer el set
+- Podemos crear una lista a partir de un set: `lista = list(set)`
 
+## Args-Kwargs
+Son una forma de referirse a la manedra de especificar una cantidad variable de argumentos o parámetros en la definición de una función.
+- **Parámetros**: Nombres que recibe una función
+- **Argumentos**: Valores efectivos de los parámetros
+- **Argumento posicional**: Sigue el orden de establecimiento
+- **Argumento por palabra clave**: Argumento precedido mediante un **identificador** en un llamado de función (nombre=...)
+- Se pueden establecer argumentos de ambos tipos en la misma llamada
+- No pueden ir argumentos posicionales **después** de por palabra clave
+- No se puede establecer por palabra clave un argumento **ya establecido** por posición
+- Dos formas de llamar a una función:
+    - `func(*argumentos)`: `argumentos` debe ser una **tupla** o **lista**. Permite **desempaquetar** el contenido de dicha estructura y establecer dichos argumentos como posicionales
+    - `func(**argumentos)` (palabra clave): `argumentos`es un **diccionario** y permite **desempaquetar** los pares **llave-valor**
+
+### Cantidad variable de parámetros
+- `*args`: Permite declarar una cantidad arbitraria de argumentos **posicionales**. Son contenidos en una **tupla**
+- `**kwargs`: Permite declarar una cantidad arbitraria de argumentos **por palabra clave**. Son contenidos en un **diccionario**
+- Una función de **args** no puede recibir **kwargs** y viceversa
+- Una función puede pedir ambos parámetros simultáneamente
+- No puede haber más de un `*`o `**`en una función
+- No se pueden declarar parámetros después de `**`
+```python
+def func1(*args):
+    print(f'func1: {args}')
+    
+def func2(**kwargs):
+    print(f'func2: {kwargs}')
+
+func1(1)
+func1(1, 2, 3, 4)
+func1()
+func2(nombre='Pedro')
+func2(nombre='Pedro', apellido="Rojas")
+func2()
+```
+```
+func1: (1,)
+func1: (1, 2, 3, 4)
+func1: ()
+func2: {'nombre': 'Pedro'}
+func2: {'nombre': 'Pedro', 'apellido': 'Rojas'}
+func2: {}
+```
 

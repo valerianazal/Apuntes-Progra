@@ -279,8 +279,11 @@ Son contenedores **mutables** y **no ordenados** que no repiten elementos y pued
 |_Length_|`len(set)`|
 |Sacar elementos|`.remove(elemento)` o `.discard(elemento)`(`discard` no arroja error cuando el elemento no|
 |Verificar si un elemento pertenece|`variable in set`|
-|Unión de conjuntos|`set_union = set_a||set_b`|
+|Unión de conjuntos|`set_union = set_a|set_b`|
 |Intersección de conjuntos (solo elementos en común)|`set_intersection = set_a & set_b`|
+|Diferencia de conjuntos (están en uno pero no en el otro) _depende del orden_|`set_difference = set_a - set_b`|
+|Diferencia simétrica (suma sets menos la intersección)|`set_a ^ set_b`|
+
 - Las operaciones de unión e intersección no alteran los sets originales
 -- -- --
 - Se puede iterar con `for`, pero no hay un orden para recorrer el set

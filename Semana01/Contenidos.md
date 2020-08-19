@@ -264,5 +264,25 @@ defaultdict(<function funcion_default at 0x7ffe337cad40>, {'A': 0.03034315468711
 - Las llaves deben ser **únicas** y _**hasheables**_, esto significa que son **inmutables**
 - Llaves permitidas: `int`, `str`, `tuple`
 - La tupla es hasheable si todos sus elementos lo son
+- Un valor del diccionario pueden ser una **funcion**
 ## Sets
+Son contenedores **mutables** y **no ordenados** que no repiten elementos y pueden ser **heterogéneos**. Tienen un comportamiento similar a los _conjuntos matemáticos_. Pueden contener cualquier objeto **hasheable**, los mismos que pueden ser llaves en los diccionarios. Se utilizan para **eliminar duplicados** y revisar si un elemento se encuentra en una estructura de forma **eficiente**.
+- Para crear un **set vacío**: `variable = ste()`
+- También se puede crear a partir de una lista de elmentos que no contendrá elementos repetidos y no necesariamente respetará el orden original --> `set(lista)``
+- Imprime con llaves --> `{set}`
+- También se puede construir con llaves directamente, pero no se pueden usar para crear un set vacío
+-- -- --
+### Operaciones de sets
+|Operación|Código|
+|---------|------|
+|Añadir elementos|`.add(elemento)`|
+|_Length_|`len(set)`|
+|Sacar elementos|`.remove(elemento)` o `.discard(elemento)`(`discard` no arroja error cuando el elemento no|
+|Verificar si un elemento pertenece|`variable in set`|
+|Unión de conjuntos|`set_union = set_a | set_b`|
+|Intersección de conjuntos (solo elementos en común)|`set_intersection = set_a & set_b`|
+- Las operaciones de unión e intersección no alteran los sets originales
+-- -- --
+- Se puede iterar con `for`, pero no hay un orden para recorrer el set
+
 

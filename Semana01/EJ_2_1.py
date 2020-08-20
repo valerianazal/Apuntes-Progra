@@ -1,5 +1,6 @@
 import os
 from random import shuffle, choice
+from collections import namedtuple
         
 class Juego:
     
@@ -12,14 +13,19 @@ class Juego:
         self.read_file()
         self.repartir_cartas()
         self.comenzar_juego(turnos)
-        self.atacar(atacante)
     
     def read_file(self):
-        path_cartas = os.path.join('contenidos', 'semana-01', \
+        Crear_tupla = namedtuple('Crear_carta', ['nombre', 'ataque', 'defensa'])
+        path_cards = os.path.join('contenidos', 'semana-01', \
             'ejercicios_propuestos', 'cards.csv')
-        with open(path_cartas, 'rt') as cartas:
-            lineas = cartas.readlines()
-            self.mazo = [n.strip().split(',') for n in lineas[1:]]
+        with open(path_cards, 'rt') as archivo:
+            lineas = archivo.readlines()
+            for i in range(len(lineas)):
+                if i == 0:
+                    pass
+                else:
+                    carta = lineas[i].strip().split(',')
+                    self.mazo.append(Crear_tupla(carta[0], carta[1], carta[2]))
         pass
     
     def repartir_cartas(self):
@@ -29,23 +35,14 @@ class Juego:
             self.cartas_j2.append(self.mazo.pop(0))
         pass
     
-    def atacar(self, atacante):
-        j1 = choice(self.cartas_j1)
-        j2 = choice(self.cartas_j2)
-        x = 1
-        if atacante % 2 == 0:
-            if int(j1[1]) >= int(j2[2]):
-                self.cartas_j2.remove(j2)
-            else:
-                self.cartas_j1.remove(j1)
-                x = 2
+    def atacar(self, atacante, defen):
+        ptos_atacante = atacante.ataque
+        ptos_defensa = defen.defensa
+        if ptos_atacante >= ptos_defensa:
+            return False
         else:
-            if int(j2[1]) >= int(j1[2]):
-                self.cartas_j1.remove(j1)
-                x = 2
-            else:
-                self.cartas_j2.remove(j2)
-        print(f'El jugador {x} gana el turno')
+            return True
+
 
     def comenzar_juego(self, turnos):
         for i in range(1, turnos + 1):
@@ -53,11 +50,25 @@ class Juego:
             if self.cartas_j1 != [] and self.cartas_j2 != []:
                 if i % 2:
                     # Ataca el jugador 1
-                    self.atacar(i)
+                    ataque1 = choice(self.cartas_j1)
+                    defensa2 = choice(self.cartas_j2)
+                    if self.atacar(ataque1, defensa2) == True:
+                        self.cartas_j1.remove(ataque1)
+                        print(f'J2 gana el turno {i}')
+                    else:
+                        self.cartas_j2.remove(defensa2)
+                        print(f'J1 gana el turno {i}')
                     pass
                 else:
                     # Ataca el jugador 2
-                    self.atacar(i)
+                    ataque2 = choice(self.cartas_j2)
+                    defensa1 = choice(self.cartas_j1)
+                    if self.atacar(ataque1, defensa2) == True:
+                        self.cartas_j2.remove(ataque2)
+                        print(f'J1 gana el turno {i}')
+                    else:
+                        self.cartas_j1.remove(defensa1)
+                        print(f'J2 gana el turno {i}')
                     pass
             else:
                 if self.cartas_j2 == []:
@@ -65,7 +76,5 @@ class Juego:
                 else:
                     print('Gana J2')
                 break
-
-
 
 juego = Juego(10)

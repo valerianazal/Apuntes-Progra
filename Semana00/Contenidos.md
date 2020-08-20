@@ -144,4 +144,3 @@ with open(ruta_juego_2, "wt") as archivo:
 - `'algo'.join(variable)`: Pone algo en todos los espacios
 - `variable.replace(esto, por esto)`: Reemplaza en el string
 
-hola

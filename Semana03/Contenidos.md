@@ -57,7 +57,7 @@
 
 **Modelo integrado**: Se junta todo
 
-## Multiherencia
+## Multiherencia
 - Se puede heredar más de una clase a la vez
 - Existe una clase `object`de la cual heredan **todas** las clases
 - **SOLUCIÓN**: Cada clase debe preocuparse de llamar a inicializar la clase que la "precede" en el orden del esquema de la multiherencia

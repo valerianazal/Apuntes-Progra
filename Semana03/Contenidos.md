@@ -1,5 +1,5 @@
 # Semana 3
-1. [Diagrama de Clases](#Diagrama-De-Clases)
+1. [Diagrama de Clases](#Diagrama-de-Clases)
 2. [Miltuherencia](#Multiherencia)
 3. [Clases Abstractas](#Clases-Abstractas)
 ## Diagrama de Clasess
@@ -160,3 +160,47 @@ class Academico(Docente, Investigador):
         self.oficina = oficina
 ```
 ## Clases Abstractas
+- Una **clase abstracta** es una clase cuya intención no es ser instanciada o crear un objeto de esa clase directamente, sino que solo usarse como parte de modelamiento de otras clases
+- Un **método abstracto** representa el comportamiento que deben tener todas las clases que hereden de ella
+- Deben ser implementados por otras subclases
+- También pueden tener métodos normales que no es necesario re-implementar en las subclases
+- Es una clase abstracta si:
+    - No se instancia directamente
+    - Contiene uno o más métodos abstractos
+    - Sus subclases implementan todos sus métodos abs
+```python
+# El módulo abd provee herramientas para definirlas
+
+from abc import ABC, abstractmethod
+
+
+class Base(ABC):
+
+    @abstractmethod
+    def metodo_1(self):
+        pass
+
+    @abstractmethod
+    def metodo_2(self):
+        pass
+
+# Si intentamos instancias la clase tira error
+```
+- Si se implementa una subclase que hereda a `Base` y no tiene alguno de los métodos abstractos hay error
+- Se pueden definir ***abstract properties*** utilizando ambos decoradores
+```python
+class Base(ABC):
+
+    @property
+    @abstractmethod
+    def valor(self):
+        return '¿Llegaremos aquí?'
+
+
+class Implementacion(Base):
+
+    @property
+    def valor(self):
+        return 'Propiedad concreta'
+```
+- Los **métodos abstractos** se beben **re-implementar**

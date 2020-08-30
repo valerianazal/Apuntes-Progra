@@ -52,6 +52,6 @@
 **Herencia**
 
 <p align="center">
-<img src="img/img5.png" alt="img" width="250"/>
+<img src="img/img5.png" alt="img" width="500"/>
 </p>
 

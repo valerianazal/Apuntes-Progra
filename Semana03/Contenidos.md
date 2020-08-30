@@ -55,3 +55,48 @@
 <img src="img/img5.png" alt="img" width="500"/>
 </p>
 
+**Modelo integrado**: Se junta todo
+## Multiherencia
+- Se puede heredar más de una clase a la vez
+- Existe una clase `object`de la cual heredan **todas** las clases
+- **SOLUCIÓN**: Cada clase debe preocuparse de llamar a inicializar la clase que la "precede" en el orden del esquema de la multiherencia
+- El orden de las clases va **de izq a der** dentro de la lista de superclases desde donde hereda la subclase
+- Se debe hacer una llamada al `super`y Python se encarga de llamr a la clase que corresponda
+
+<p align="center">
+<img src="img/img7.png" alt="img" width="150"/>
+</p>
+
+```python
+class ClaseB:
+    
+    def llamar(self):
+        print("Llamando método en Clase B")
+
+
+class SubClaseIzquierda(ClaseB):
+    
+    def llamar(self):
+        print("Estoy en Subclase Izquierda")
+        super().llamar()
+        print("Llamando método en Subclase Izquierda")
+
+
+class SubClaseDerecha(ClaseB):
+    
+    def llamar(self):
+        print("Estoy en Subclase Derecha")
+        super().llamar()
+        print("Llamando método en Subclase Derecha")
+
+
+class SubClaseA(SubClaseIzquierda, SubClaseDerecha):
+
+    def llamar(self):
+        print("Estoy en Subclase A")
+        super().llamar()
+        print("Llamando método en Subclase A")
+
+# Al usar super solo se llama una vez al método `llamar` de `ClaseB``
+```
+

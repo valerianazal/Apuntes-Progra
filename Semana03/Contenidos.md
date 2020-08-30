@@ -64,7 +64,7 @@
 - Se debe hacer una llamada al `super`y Python se encarga de llamr a la clase que corresponda
 
 <p align="center">
-<img src="img/img7.png" alt="img" width="150"/>
+<img src="img/img7.png" alt="img" width="350"/>
 </p>
 
 ```python

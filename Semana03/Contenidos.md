@@ -20,6 +20,7 @@
 - Los objetos se construyen a partir de **inclusión** de otros elementos
 - La existencia de los objetos inlcuidos depende de la existencia del objeto que los incluye
 ![Hola](img3.jpg)
+
 **AGREGACIÓN**
 - Contstruimos la clase bsae usando otros objetos
 - El tiempo de vida del objeto que agregamos es **independiente** del tiempo de vida del objeto que lo incluye

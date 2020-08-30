@@ -13,11 +13,14 @@
 - Representamos una clase de la siguiente forma:
 
 <p align="center">
-<img src="img/img.png" alt="img" width="100"/>
+<img src="img/img.png" alt="img" width="150"/>
 </p>
 
 - Para los atributos se debe especificar su nombre y tipo de variable. Ejemplo:
-![](img/img2.png)
+
+<p align="center">
+<img src="img/img2.png" alt="img" width="150"/>
+</p>
 
 #### 2. Relaciones
 - Relaciones más comunes: composición, agregación y herencia
@@ -26,10 +29,15 @@
 - Los objetos se construyen a partir de **inclusión** de otros elementos
 - La existencia de los objetos inlcuidos depende de la existencia del objeto que los incluye
 
+<p align="center">
 <img src="img/img3.png" alt="img" width="100"/>
+</p>
 
 **AGREGACIÓN**
 - Contstruimos la clase bsae usando otros objetos
 - El tiempo de vida del objeto que agregamos es **independiente** del tiempo de vida del objeto que lo incluye
 - 
-![](img/img4.png)
+
+<p align="center">
+<img src="img/img4.png" alt="img" width="100"/>
+</p>

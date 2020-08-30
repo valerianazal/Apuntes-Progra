@@ -1,7 +1,7 @@
 # Semana 3
-1. [Diagrama de Clases](#DiagramaDeClases)
+1. [Diagrama de Clases](#Diagrama-De-Clases)
 2. [Miltuherencia](#Multiherencia)
-3. [Clases Abstractas](#ClasesAbstractas)
+3. [Clases Abstractas](#Clases-Abstractas)
 ## Diagrama de Clasess
 - Permite visualizar fácilmente las clases que componen un sistema, incluyendo atributos, métodos e interacciones
 - Hay que analizar atentamente los requerimientos del sistema

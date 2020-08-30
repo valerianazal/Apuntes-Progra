@@ -11,16 +11,18 @@
 - Estructuras básicas que **encapsulan** la información
 - Se debe recopilar la info de forma independiente para cada clase
 - Representamos una clase de la siguiente forma:
-<img src="img/img.png" alt="img" width="60"/>
+<img src="img/img.png" alt="img" width="100"/>
 - Para los atributos se debe especificar su nombre y tipo de variable. Ejemplo:
 ![](img/img2.png)
+
 #### 2. Relaciones
 - Relaciones más comunes: composición, agregación y herencia
 
 **COMPOSICIÓN**
 - Los objetos se construyen a partir de **inclusión** de otros elementos
 - La existencia de los objetos inlcuidos depende de la existencia del objeto que los incluye
-![](img/img3.png)
+
+<img src="img/img3.png" alt="img" width="100"/>
 
 **AGREGACIÓN**
 - Contstruimos la clase bsae usando otros objetos

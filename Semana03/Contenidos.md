@@ -11,7 +11,11 @@
 - Estructuras básicas que **encapsulan** la información
 - Se debe recopilar la info de forma independiente para cada clase
 - Representamos una clase de la siguiente forma:
+
+<p align="center">
 <img src="img/img.png" alt="img" width="100"/>
+</p>
+
 - Para los atributos se debe especificar su nombre y tipo de variable. Ejemplo:
 ![](img/img2.png)
 

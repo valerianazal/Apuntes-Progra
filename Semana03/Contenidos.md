@@ -11,7 +11,7 @@
 - Estructuras básicas que **encapsulan** la información
 - Se debe recopilar la info de forma independiente para cada clase
 - Representamos una clase de la siguiente forma:
-![](img/img.png)
+![](img/img.png\"width=60"\)
 - Para los atributos se debe especificar su nombre y tipo de variable. Ejemplo:
 ![](img/img2.png)
 #### 2. Relaciones
@@ -20,7 +20,7 @@
 **COMPOSICIÓN**
 - Los objetos se construyen a partir de **inclusión** de otros elementos
 - La existencia de los objetos inlcuidos depende de la existencia del objeto que los incluye
-![](img/simg3.png)
+![](img/img3.png)
 
 **AGREGACIÓN**
 - Contstruimos la clase bsae usando otros objetos

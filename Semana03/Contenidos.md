@@ -2,7 +2,7 @@
 1. [Diagrama de Clases](#Diagrama-de-Clases)
 2. [Miltuherencia](#Multiherencia)
 3. [Clases Abstractas](#Clases-Abstractas)
-## Diagrama de Clasess
+## Diagrama de Clases
 - Permite visualizar fácilmente las clases que componen un sistema, incluyendo atributos, métodos e interacciones
 - Hay que analizar atentamente los requerimientos del sistema
 - Explican cómo ocurre la interacción entre las clases dentro del sistema

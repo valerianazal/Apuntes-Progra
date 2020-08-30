@@ -11,7 +11,7 @@
 - Estructuras básicas que **encapsulan** la información
 - Se debe recopilar la info de forma independiente para cada clase
 - Representamos una clase de la siguiente forma:
-![](img/img.png\"width=60"\)
+![](img/img.png =100x20)
 - Para los atributos se debe especificar su nombre y tipo de variable. Ejemplo:
 ![](img/img2.png)
 #### 2. Relaciones

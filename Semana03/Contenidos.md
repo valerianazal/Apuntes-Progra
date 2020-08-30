@@ -97,6 +97,65 @@ class SubClaseA(SubClaseIzquierda, SubClaseDerecha):
         super().llamar()
         print("Llamando método en Subclase A")
 
-# Al usar super solo se llama una vez al método `llamar` de `ClaseB``
+# Al usar super solo se llama una vez al método llamar de ClaseB
 ```
+### Método `__mro__`
+- Significa _method resolution order`
+- Muestra el orden de la jerarquía de clases a partir de la clase actual
+- Es útil para casos de multiherencia complejos
+- El resultado depende de la clase a la cual se aplica
+- **No toda estructura de multiherencia está permitida**
+- El problema es cuando la superclase y las clases piden argumentos, ya que el programa no sabe qué argumento enviar a qué clase
+- La solución es utilizar `*args` y `**kwargs`
+```python
+class Investigador:
 
+    def __init__(self, area):
+        self.area = area
+        self.num_publicaciones = 0
+
+
+class Docente:
+
+    def __init__(self, departamento):
+        self.departamento = departamento
+        self.num_cursos = 3
+
+
+class Academico(Docente, Investigador):
+
+    def __init__(self, nombre, oficina, area_investigacion, departamento):
+        # Queremos reemplazar esto por un super().__init__(...), pero no sabemos qué argumentos usar
+        Investigador.__init__(self, area_investigacion)
+        Docente.__init__(self, departamento)
+        self.nombre = nombre
+        self.oficina = oficina
+```
+```python
+class Investigador:
+
+    def __init__(self, area='', **kwargs):
+        print(f"init Investigador con area {area} y kwargs:{kwargs}")
+        super().__init__(**kwargs)
+        self.area = area
+        self.num_publicaciones = 0
+
+
+class Docente:
+
+    def __init__(self, departamento='', **kwargs):
+        print(f"init Docente con depto {departamento} y kwargs:{kwargs}")
+        super().__init__(**kwargs)
+        self.departamento = departamento
+        self.num_cursos = 3
+
+
+class Academico(Docente, Investigador):
+
+    def __init__(self, nombre, oficina, **kwargs):
+        print(f"init Academico con nombre {nombre}, oficina {oficina}, kwargs:{kwargs}")
+        super().__init__(**kwargs)
+        self.nombre = nombre
+        self.oficina = oficina
+```
+## Clases Abstractas

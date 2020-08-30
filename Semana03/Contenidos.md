@@ -56,6 +56,7 @@
 </p>
 
 **Modelo integrado**: Se junta todo
+
 ## Multiherencia
 - Se puede heredar más de una clase a la vez
 - Existe una clase `object`de la cual heredan **todas** las clases

@@ -28,7 +28,6 @@ raise TipoDeError('Mensaje')
 - El programa continúa en la instrucción **posterior** al bloque `try/except`
 - `else`: Se ejecutarán siempre y cuando **no** se haya lanzado una **excepción**
 - `finally`: Se realizan **siempre**, independiente de si ocurrió una excepción o no 
-
 ### Excepciones personalizadas
 - Todas las excepciones heredan de `BaseException`
 - Existen tre tipos: `SystemExit`, `KeyboradInterrupt`, y `Exception`

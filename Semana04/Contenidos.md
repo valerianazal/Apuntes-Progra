@@ -29,7 +29,7 @@ raise TipoDeError('Mensaje')
 - `else`: Se ejecutarán siempre y cuando **no** se haya lanzado una **excepción**
 - `finally`: Se realizan **siempre**, independiente de si ocurrió una excepción o no 
 
-### Excepciones personalizadas
+### Excepciones personalizadas
 - Todas las excepciones heredan de `BaseException`
 - Existen tre tipos: `SystemExit`, `KeyboradInterrupt`, y `Exception`
 - Podemos crear nuestro tipo de excepciones heredando de la calse `Exception`

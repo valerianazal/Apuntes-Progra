@@ -81,6 +81,7 @@ for i in iterable:
 - La sintaxis para crearlos es muy parecida a la comprensión de  listas, pero con **paréntesis normales ()**
 - Solo se pueden usar **1 VEZ**
 - Se ahorra almacenamiento
+- Los podemos poner en `__iter__`
 ```python
 generador_pares = (2 * i for i in range(6))
 for i in generador_pares:
@@ -120,3 +121,78 @@ Contando en forma decreciente desde 5
 3
 2
 1
+## Funciones lambda
+- Las funciones son tratadas como cualquier otra variable:
+    - Pueden ser asignadas a una variables y usarlas
+    - Pueden ser pasadas como parámetros a otras
+**Funciones lambda**: 
+    - Forma alternativa de funciones. 
+    - No se necesita `return`
+    - Se caracterizan por pueden ser definidas en forma anónima
+    - No tienen nombre espécifico
+    - Son utilizadas únicamente donde fueron creadas
+```python
+sucesor = lambda x: x + 1
+# Es (casi) equivalente a
+def sumar_uno(x):
+    return x + 1
+
+restar = lambda x, y: x - y
+# Es (casi) equivalente a
+def sustracción(x, y):
+    return x - y
+```
+### `map`
+`map(f, iterable)` = `(f(x) for x in iterable)`
+- Recibe como parámetro una función y **al menos** un iterable
+- Retorna un generador que resulta de aplicar la función sobre cada  elemento del iterable
+- La cantidad de elementos que se procesan corresponde a la  cantidad que tiene el  iterable más pequeño
+```python
+strings = ['Señores pasajeros', 'Disculpen', 'mi', 'IntencIÓN', 'no', 'Es', 'MolEstar']
+mapeo = map(lambda x: x.lower(), strings)
+', '.join(mapeo)
+```
+'señores pasajeros, disculpen, mi, intención, no, es, molestar'
+```python
+a = [1, 2, 3, 4]
+b = [17, 12, 11, 10]
+c = [-1, -4, 5, 9]
+
+mapeo_1 = map(lambda x, y: x ** 2 + y ** 2, a, b)
+mapeo_2 = map(lambda x, y, z: x + y ** 2 + z ** 3, a, b, c)
+
+print(list(mapeo_1))
+print(list(mapeo_2))
+```
+[290, 148, 130, 116]
+[289, 82, 249, 833]
+### `filter`
+`filter(f, iterable)` = `(x for x in iterable if f(x))`
+- Recibe una función que retorna `True` o `False` y un iterable
+- Retorna un generador que entrega  aquellos elementos  del iterable donde la función retorna `True`
+```python
+def fibonacci(límite):
+    a, b = 0, 1
+    for _ in range(límite):
+        yield b
+        a, b = b, a + b
+
+filtrado_impares = filter(lambda x: x % 2 != 0, fibonacci(10))
+print(list(filtrado_impares))
+
+filtrado_pares = filter(lambda x: x % 2 == 0, fibonacci(10))
+print(list(filtrado_pares))
+```
+[1, 1, 3, 5, 13, 21, 55]
+[2, 8, 34]
+```python
+set_filtrado = filter(lambda x: x < 10, {100, 1, 5, 9, 91, 1})
+list(set_filtrado)
+```
+[1, 5, 9]
+### `reduce`
+`reduce(f, iterable)`
+`from functools import reduce`
+- Consiste enaplicar sucesivamente la función f(x, y), donde `x` es el resultado acumulado e `y` es un elemento de la secuencia
+- Recibe una función que toma dos valores y un iterable
+- Retorna lo que resulta de aplicarla función al irerable `[s1, s2, s3, ..., sn] de la siguiente forma: f(f(f(f(s1, s2), s3), s4), s5), ...

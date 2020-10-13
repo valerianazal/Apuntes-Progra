@@ -32,7 +32,7 @@ if __name__ == '__main__':
 ```
 
 <p align="center">
-<img src="img/foto1.png" alt="img" width="250"/>
+<img src="img/foto1.png" alt="img" width="350"/>
 </p>
 
 ## Elementos Gráficos
@@ -168,6 +168,6 @@ class MiVentana(QWidget):
 ```
 
 <p align="center">
-<img src="img/foto3.png" alt="img" width="150"/>
+<img src="img/foto3.png" alt="img" width="220"/>
 </p>
 

@@ -32,7 +32,7 @@ if __name__ == '__main__':
 ```
 
 <p align="center">
-<img src="img/foto1.png" alt="img" width="150"/>
+<img src="img/foto1.png" alt="img" width="250"/>
 </p>
 
 ## Elementos Gráficos
@@ -98,7 +98,7 @@ if __name__ == '__main__':
 ```
 
 <p align="center">
-<img src="img/foto2.png" alt="img" width="150"/>
+<img src="img/foto2.png" alt="img" width="200"/>
 </p>
 
 ### Imágenes

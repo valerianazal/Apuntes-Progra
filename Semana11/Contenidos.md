@@ -48,7 +48,7 @@ Algunas acciones que se pueden llevar a cabo:
 
 
 <p align="center">
-<img src="img/niveles.png" alt="img" width="250"/>
+<img src="img/niveles.png" alt="img" width="350"/>
 </p>
 
 ```python
@@ -79,7 +79,7 @@ class ArbolBFS(Arbol):
 
 
 <p align="center">
-<img src="img/ramas.png" alt="img" width="250"/>
+<img src="img/ramas.png" alt="img" width="350"/>
 </p>
 
 ```python
